@@ -1,10 +1,10 @@
 
 CXX=g++
-CXXFLAGS=-std=c++11 -Wall -O2
+CXXFLAGS=-std=c++11 -fexec-charset=gbk -Wall -O2
 
 TARGET_DIR:=build
 SRCS:=$(wildcard *.cpp)
-TARGETS:=$(patsubst %.cpp,$(TARGET_DIR)/%,$(SRCS))
+TARGETS:=$(patsubst %.cpp,$(TARGET_DIR)/%.exe,$(SRCS))
 
 
 .PHONY: all
@@ -14,7 +14,7 @@ all: $(TARGET_DIR) $(TARGETS)
 $(TARGET_DIR):
 	mkdir -p $@
 
-$(TARGET_DIR)/%: %.cpp
+$(TARGET_DIR)/%.exe: %.cpp
 	@echo compile $^
 	$(CXX) $(CXXFLAGS) $^ -o $@ 
 	@echo
