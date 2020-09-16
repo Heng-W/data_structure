@@ -7,7 +7,7 @@ SRCS:=$(wildcard *.cpp)
 TARGETS:=$(patsubst %.cpp,$(TARGET_DIR)/%,$(SRCS))
 
 
-.PHONY: all
+.PHONY: all clean
 
 all: $(TARGET_DIR) $(TARGETS)
 
@@ -19,3 +19,5 @@ $(TARGET_DIR)/%: %.cpp
 	$(CXX) $(CXXFLAGS) $^ -o $@ 
 	@echo
 
+clean:
+	rm -rf build/

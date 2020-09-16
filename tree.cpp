@@ -167,7 +167,7 @@ public:
         {
             insert(a[i]);
         }
-        cout << "Binary sort tree:" << endl;
+        cout << "Binary sort tree: " << endl;
     }
 
     Node* find(Node* p, T data)
@@ -233,14 +233,14 @@ public:
 
     void disp()
     {
-        cout << "depth：" << depth(root_) << endl;
-        cout << "preorder traversal：";
+        cout << "depth: " << depth(root_) << endl;
+        cout << "preorder traversal: ";
         pre(root_);
         cout << endl;
-        cout << "inorder traversal： ";
+        cout << "inorder traversal: ";
         inorder(root_);
         cout << endl;
-        cout << "postorder traversal:";
+        cout << "postorder traversal: ";
         post(root_);
         cout << endl << endl;
     }

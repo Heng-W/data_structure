@@ -144,7 +144,7 @@ int main()
     srand(time(NULL));
 
     float a[5];
-    cout << "origin：";
+    cout << "origin: ";
     for (int i = 0; i < 5; i++)
     {
         a[i] = 100.0 * rand() / (RAND_MAX + 1.0);
@@ -159,10 +159,10 @@ int main()
     list.insertLast(a[3]);
     list.del(a[0]);
     list.insertFirst(a[4]);
-    cout << "Traversal：";
+    cout << "Traversal: ";
     list.traversal();
     cout << endl;
-    cout << "Total number of elements：" << list.getLength() << endl;
+    cout << "Total number of elements: " << list.getLength() << endl;
 
     clock_t end = clock();
     cout << "Running time: " << end - start << "/" << CLOCKS_PER_SEC << " s" << endl;
