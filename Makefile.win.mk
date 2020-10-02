@@ -1,6 +1,6 @@
 
 CXX=g++
-CXXFLAGS=-std=c++11 -Wall -O2 #-fexec-charset=gbk
+CXXFLAGS=-std=c++11 -Wall -O2 -fexec-charset=gbk
 
 TARGET_DIR:=build
 SRCS:=$(wildcard *.cpp)
