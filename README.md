@@ -13,5 +13,5 @@
 
 ### 生成所有可执行文件
 
-- Windows平台安装gcc编译器后，双击compile.bat或输入make -f Makefile.win.mk
+- Windows平台安装g++编译器后，双击compile.bat或输入make -f Makefile.win.mk
 - Linux平台直接输入make
